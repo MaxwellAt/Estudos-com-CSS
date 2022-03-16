@@ -4,40 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+        body {
+          background-color: black;
+          color: green;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+        #relogio{
+        display:flex;
+        justify-content: center;
+        }
+  </style>
 </head>
 <body>
-
-  <header>
-  
-    <button class="menu" id="menu"><i class="fas fa-align-justify"></i>
-    MENU</button>
-      
-    <h1 class="Titulo">
-      TITULO DO SITE
-    </h1>  
-
-    <a href="#" class="login">LOGIN</a>
-      
-  </header>
-
-
-  <section>
-
-    <div class="primeira seção">
-      <h4>Primeiro</h4>
-      <p>primeiro texto</p>
-    </div>
-    <div class="segunda seção">
-      <h4>Segundo</h4>
-      <p>segundo texto</p>
-    </div>
-  
-  </section>
-
+<header>
+</header>
+<main>
+<h2>
+A hora de agora é:<br>
+</h2>
+<div id='relogio'>
+</div>
+<a id='link' href='http://srv01.tce.ma.gov.br/ponto/bater-ponto'>
+<div>.</div>
+</a>
+</main>
+<script>
+now = new Date;
+var hora = parseInt(now.getHours());
+var min = parseInt(now.getMinutes());
+var horaCerta = String(hora) + ':' + String(min);
+var relogio = document.getElementById("relogio");
+relogio.innerHTML = horaCerta;
+</script>
 </body>
-
-
-<script src="jquery-3.6.0.min.js"></script>
-<script src="main.js"></script>
 </html>
